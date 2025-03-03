@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cookie Manager</title>
-    <script type="module" crossorigin src="./assets/index-DGjXl2tW.js"></script>
+    <script>
+      if (sessionStorage.getItem("redirected") !== "true") {
+        sessionStorage.setItem("redirected", "true");
+        window.location.replace("/GirlScoutCookieTracker");
+      } else {
+        sessionStorage.removeItem("redirected");
+      }
+    </script>
+    
+    <script type="module" crossorigin src="./assets/index-CRRLEbpe.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BJaIdn9A.css">
   </head>
   <body>
